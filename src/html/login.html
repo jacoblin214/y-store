@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    @@include('../html/common/head.html')
+    <link rel="stylesheet" href="../css/login.css">
+    <title>登录</title>
+</head>
+
+<body>
+
+    @@include('common/header.html')
+
+    <main class="main">
+        <div class="banner">
+            <h2 class="banner-title">会员登录</h2>
+        </div>
+        <section class="item-section">
+            <div class="settlement-method">
+                <ul class="method-list">
+                    <li class="method-item">
+                        <div class="fold-header item-header">
+                            <h2 class="item-title">会员登录</h2>
+                            <!-- <span class="iconfont icon-row-down-copy"></span> -->
+                        </div>
+                        <p class="explanation">已注册会员请登录结算，登陆后可加快结算流程，并保存购买记录</p>
+                        <!-- collaspe -->
+                        <div class="fold-body item-body">
+                            <form action="">
+                                <div class="user-item">
+                                    <label class="user-label" for="email">电子邮箱</label>
+                                    <input class="user-input" id="email" type="text" placeholder="电子邮箱" required>
+                                </div>
+                                <div class="user-item">
+                                    <label class="user-label" for="password">密码</label>
+                                    <input class="user-input" id="password" type="text" placeholder="至少六个字符、必须含有数字和字母" required>
+                                </div>
+                                <a class="user-btn" href="cart.html">登录</a>
+                                <!-- <input type="submit" value="登录"></input> -->
+                                <div class="user-link">
+                                    <a href="#">忘记密码？|</a>
+                                    <a href="register.html" class="toReigter">去注册</a>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="method-footer">
+                    <h3 class="title">温馨提示</h3>
+                    <p>Y-Store尊重客户隐私并会稳妥处理信息安全性和保密性</p>
+                    <p>提供您安全无忧的购物体验！</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('../html/common/footer.html') @@include('../html/common/foot.html')
+    <!-- <script src="../js/settlement-method.js"></script> -->
+</body>
+
+</html>

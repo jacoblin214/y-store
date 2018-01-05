@@ -1,0 +1,75 @@
+/**
+ * @Author: jecyu
+ * @Date: 2017-12-21 11:39:17 am 
+ * @Modified By: jeCyu 
+ * @Last Modified time: 2017-12-29 5:09:21 pm 
+ */
+
+@import "mixin/_mixin.scss";
+.main {
+    width: pxTorem(750px);
+}
+
+/* banner */
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: pxTorem(170px);
+    background: lightblue url(../images/banner-1.png) no-repeat;
+    background-size: cover;
+    .banner-title {
+        position: relative;
+        @include font-dpr(18px);
+        color: #fff;
+        /* underline */
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: pxTorem(5px);
+            width: pxTorem(46px);
+            border-radius: pxTorem(5px);
+            background: #fff;
+        }
+    }
+}
+
+/* main section */
+
+.item-section {
+    position: relative;
+    min-height: 100%;
+    padding: pxTorem(60px);
+    color: #747474; // background-color: #fff;
+    border-bottom: pxTorem(12px) solid rgb(230, 230, 230);
+    border-top: pxTorem(12px) solid rgb(230, 230, 230);
+
+    .iconfont {
+        @include font-dpr(16px);
+    }
+}
+
+/* personal information */
+.info-list {
+    .info-item {
+        display: flex;
+        justify-content: space-between;
+        padding: pxTorem(10px) 0;
+        border-bottom: pxTorem(3px) solid #747474;
+
+        @include font-dpr(16px);
+
+        .item-title {
+            display: inline-block;
+        }
+
+        .item-link {
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+/**
+ * @Author: jecyu
+ * @Date: 2017-12-25 10:05:49 am 
+ * @Modified By: jeCyu 
+ * @Last Modified time: 2017-12-25 6:03:30 pm 
+ */
+
+@import "mixin/_mixin.scss";
+.main {
+    width: pxTorem(750px);
+}
+
+
+/* banner */
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: pxTorem(12px);
+    height: pxTorem(170px);
+    background: lightblue url(../images/banner-1.png) no-repeat;
+    background-size: cover;
+    .banner-title {
+        position: relative;
+        @include font-dpr(18px);
+        color: #fff;
+        /* underline */
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: pxTorem(5px);
+            width: pxTorem(46px);
+            border-radius: pxTorem(5px);
+            background: #fff;
+        }
+    }
+}
+
+
+/* main section */
+
+.item-section {
+    position: relative;
+    min-height: 100%;
+    border-bottom: pxTorem(12px) solid rgb(230, 230, 230);
+    background: #fff;
+    color: #747474;
+    /* delivery-notice */
+    &.delivery-notice {
+        color: #234755;
+        height: pxTorem(194px);
+        text-align: center;
+        .message {
+            padding: pxTorem(50px) 0;
+            @include font-dpr(16px);
+        }
+    }
+}

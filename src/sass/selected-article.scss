@@ -1,0 +1,105 @@
+/**
+ * @Author: jecyu
+ * @Date: 2017-12-23 2:00:42 pm 
+ * @Modified By: jeCyu 
+ * @Last Modified time: 2017-12-29 6:12:47 pm 
+ */
+
+@import "mixin/_mixin.scss";
+.main {
+    width: pxTorem(750px);
+}
+
+/* banner */
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: pxTorem(12px);
+    height: pxTorem(170px);
+
+    background: lightblue url(../images/banner-1.png) no-repeat;
+    background-size: cover;
+    .banner-title {
+        position: relative;
+        @include font-dpr(18px);
+        color: #fff;
+        /* underline */
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: pxTorem(5px);
+            width: pxTorem(46px);
+            border-radius: pxTorem(5px);
+            background: #fff;
+        }
+    }
+}
+
+/* main section */
+
+.item-section {
+    position: relative;
+    min-height: 100%;
+    color: #747474;
+    background: #fff;
+    border-bottom: pxTorem(12px) solid rgb(230, 230, 230);
+}
+
+.middle-content {
+    width: pxTorem(750px);
+    // height: pxTorem(3100px);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.media-container {
+    display: flex;
+    // justify-content: space-between;
+    .media-item {
+        width: pxTorem(750px);
+        margin: pxTorem(10px) pxTorem(10px) 0 pxTorem(5px);
+    }
+
+    &:nth-child(1) {
+        margin-left: pxTorem(5px);
+    }
+
+    .item-figure {
+        position: relative;
+        border: 0;
+        .item-img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .item-figcation {
+        height: pxTorem(240px);
+        // width: pxTorem(300px);
+        margin: 0 auto;
+        // border-width: pxTorem(1px);
+        // border-left: solid #747474;
+        // border-right: solid #747474;
+        // border-bottom: solid #747474;
+
+        @include font-dpr(12px);
+        .title {
+            @include font-dpr(16px);
+            // color: #234755;
+            margin: 0 pxTorem(10px);
+            text-align: left;
+        }
+
+        .date {
+            @include font-dpr(12px);
+            margin: pxTorem(10px) pxTorem(10px);
+            text-align: left;
+        }
+    }
+}

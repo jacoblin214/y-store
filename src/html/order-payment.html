@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('../html/common/head.html')
+	<title>订单支付</title>
+	<link rel="stylesheet" type="text/css" href="../css/order-payment.css">
+</head>
+
+<body>
+	@@include('common/header.html')
+
+
+	<main class="main">
+		<div class="banner">
+			<h2 class="banner-title">订单支付</h2>
+		</div>
+		<section class="item-section order-payment">
+			<div class="content-4">
+				<p>恭喜您的订单提交成功！</p>
+			</div>
+			<div class="content-5">
+				<p>收货信息</p>
+			</div>
+			<div class="content-6">
+				<p>收货人：郭美美
+					<br>收货电话：+86 158 7766 2560
+					<br>收货地址：广东省 广州市 天河区 天河大道天河商务中心C座2006室 518000</p>
+				<p>普通快递
+					<br>免费
+					<br>预计发货后2-5个工作日送达 （偏远地区另计）</p>
+			</div>
+			<div class="content-5">
+				<p>支付方式</p>
+			</div>
+			<div class="content-7">
+				<p>
+					<i class="iconfont icon-wechat2"></i>&nbsp&nbsp微信支付
+					<br>不开具发票</p>
+			</div>
+			<div class="opera-btn">
+				<a class="btn" href="payment-success.html">立即支付</a>
+			</div>
+			<div class="content-9">
+				<p>订单提交后2小时内未付款，订单将被系自动取消，请您尽快完成支付以确保商品能及时送达。</p>
+			</div>
+			<div class="content-10">
+				<button>更改支付方式</button>
+			</div>
+			<div class="content-11">
+				<dl class="item">
+					<dt class="item-title">订单状态:</dt>
+					<dd>待付款</dd>
+				</dl>
+				<dl class="item">
+					<dt class="item-title">订单编号:</dt>
+					<dd>YS2017112215001A</dd>
+				</dl>
+				<dl class="item">
+					<dt class="item-title">创建日期:</dt>
+					<dd>2017-11-22 15:20:01</dd>
+				</dl>
+				<dl class="item">
+					<dt class="item-title">总计:</dt>
+					<dd>¥2，230</dd>
+				</dl>
+				<dl class="item">
+					<dt class="item-title">数量:</dt>
+					<dd>2</dd>
+				</dl>
+
+			</div>
+		</section>
+		<section class="item-section product-section">
+			<div class="product-list">
+				<ul>
+					<li class="flag" role="link">
+						<div class="flag-body">
+							<a class="flag-item figure" href="###">
+								<img src="../images/product-s-1.png" alt="">
+							</a>
+							<div class="flag-item figcaption">
+								<h3 class="flag-title">
+									<span>法国波尔多AOP级原装进口红酒干红葡萄酒</span>
+								</h3>
+								<p class="flag-series">系列:
+									<span>Charean de pressar</span>
+								</p>
+								<p class="flag-No">货号:
+									<span>YS78662530</span>
+								</p>
+								<div class="flag-price">
+									<select id="" class="count">
+										<option value="数量10">数量:10</option>
+										<option value="数量9">数量:9</option>
+										<option value="数量8">数量:8</option>
+										<option value="数量7">数量:7</option>
+									</select>
+									<strong>
+										<small>￥</small>866</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="flag" role="link">
+						<div class="flag-body">
+							<a class="flag-item figure" href="###">
+								<img src="../images/product-s-3.png" alt="">
+							</a>
+							<div class="flag-item figcaption">
+								<h3 class="flag-title">
+									<span>法国波尔多AOP级原装进口红酒干红葡萄酒</span>
+								</h3>
+								<p class="flag-series">系列:
+									<span>Charean de pressar</span>
+								</p>
+								<p class="flag-No">货号:
+									<span>YS78662530</span>
+								</p>
+								<div class="flag-price">
+									<select id="" class="count">
+										<option value="数量10">数量:10</option>
+										<option value="数量9">数量:9</option>
+										<option value="数量8">数量:8</option>
+										<option value="数量7">数量:7</option>
+									</select>
+									<strong>
+										<small>￥</small>866</strong>
+								</div>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</section>
+		<section class="item-section subtotal-section">
+			<div class="subtotal-orders" role="table">
+				<div class="thead item">
+					<span>订单小计</span>
+					<p>已选:
+						<span class="count">2</span>件商品
+					</p>
+				</div>
+				<div class="tbody">
+					<div class="item-productSum item">
+						<span>商品总计</span>
+						<strong>
+							<small>￥</small>1230</strong>
+					</div>
+					<div class="item-shipping item">
+						<span>运费</span>
+						<span>￥0</span>
+					</div>
+					<div class="item-total item">
+						<span>总计</span>
+						<strong>
+							<small>￥</small>2230</strong>
+					</div>
+
+				</div>
+
+				<div class="tfoot">
+					<div class="tfoot-btn">
+						<a class="btn" href="payment-success.html">立即支付</a>
+					</div>
+					<p>订单提交后2小时后，订单将被系统自动取消，请您尽快完成支付以确保商品能及时送达。</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('../html/common/footer.html') @@include('../html/common/foot.html')
+
+</body>
+
+</html>

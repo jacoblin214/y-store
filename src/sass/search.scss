@@ -1,0 +1,132 @@
+/**
+ * @Author: jecyu
+ * @Date: 2017-12-22 6:28:45 pm 
+ * @Modified By: jeCyu 
+ * @Last Modified time: 2017-12-26 5:16:50 pm 
+ */
+
+@import "mixin/_mixin.scss";
+.main {
+    width: pxTorem(750px);
+}
+
+/* banner */
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: pxTorem(12px);
+    height: pxTorem(170px);
+
+    background: lightblue url(../images/banner-1.png) no-repeat;
+    background-size: cover;
+
+    .banner-title {
+        position: relative;
+        @include font-dpr(18px);
+        color: #fff;
+        /* underline */
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: pxTorem(5px);
+            width: pxTorem(46px);
+            border-radius: pxTorem(5px);
+            background: #fff;
+        }
+    }
+}
+
+.item-section {
+    position: relative;
+    color: #747474; // background-color: #fff;
+    background: #fff;
+    border-bottom: pxTorem(12px) solid rgb(230, 230, 230);
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    height: pxTorem(220px);
+    padding-top: pxTorem(70px);
+
+    .iconfont {
+        @include font-dpr(16px);
+        color: #d2d2d2;
+    }
+
+    .search-content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: pxTorem(550px);
+        height: pxTorem(100px);
+        padding: 0 pxTorem(20px);
+        border-radius: pxTorem(20px);
+        border: pxTorem(3px) solid #d2d2d2;
+    }
+
+    .search-input-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: flex;
+        width: inherit;
+        height: pxTorem(50px);
+
+        .user-close {
+            width: pxTorem(50px);
+            height: pxTorem(50px);
+            padding-right: pxTorem(10px);
+            border-right: pxTorem(3px) solid #d2d2d2;
+            @include font-dpr(16px);
+        }
+
+        .user-input {
+            width: pxTorem(400px);
+            height: pxTorem(50px);
+            border: none;
+            padding: 0 pxTorem(20px);
+
+            @include font-dpr(16px);
+            color: #747474;
+        }
+
+        .user-search {
+            position: absolute;
+            right: pxTorem(40px);
+            width: pxTorem(50px);
+            height: pxTorem(50px);
+        }
+    }
+
+    .view-all {
+        position: absolute;
+        top: pxTorem(190px);
+        right: pxTorem(110px);
+
+        a {
+            @include font-dpr(14px);
+            color: #747474;
+        }
+    }
+}
+
+.footer-background {
+    width: 100%;
+    height: pxTorem(600px);
+    background: url("../images/search-content-1.jpg") no-repeat;
+    background-size: contain;
+}
+
+input::-webkit-input-placeholder {
+    /* placeholder color  */
+    color: #d2d2d2;
+}

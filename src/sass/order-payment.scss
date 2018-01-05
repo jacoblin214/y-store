@@ -1,0 +1,331 @@
+/**
+ * @Author: jecyu
+ * @Date: 2017-12-25 3:43:39 pm 
+ * @Modified By: jeCyu 
+ * @Last Modified time: 2017-12-29 5:30:57 pm 
+ */
+@import "mixin/_mixin.scss";
+.main {
+    width: pxTorem(750px);
+}
+
+/* banner */
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: pxTorem(12px);
+    height: pxTorem(170px);
+
+    background: lightblue url(../images/banner-1.png) no-repeat;
+    background-size: cover;
+
+    .banner-title {
+        position: relative;
+        @include font-dpr(18px);
+        color: #fff;
+        /* underline */
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: pxTorem(5px);
+            width: pxTorem(46px);
+            border-radius: pxTorem(5px);
+            background: #fff;
+        }
+    }
+}
+
+/* main section */
+
+.item-section {
+    position: relative;
+    min-height: 100%;
+    color: #747474;
+    background: #fff;
+    border-bottom: pxTorem(12px) solid rgb(230, 230, 230);
+
+    /* order-payment */
+    border: 0;
+    padding: pxTorem(50px);
+
+    &.product-section,
+    &.subtotal-section {
+        padding-top: 0;
+    }
+
+    &.order-payment {
+        margin-bottom: pxTorem(-80px);
+    }
+}
+
+.content-4 {
+    width: inherit;
+    height: pxTorem(100px);
+    margin: 0 auto;
+    border-bottom: pxTorem(3px) solid #d2d2d2;
+
+    text-align: center;
+    @include font-dpr(20px);
+
+    p {
+        color: #234755;
+    }
+}
+
+.content-5 {
+    width: 100%;
+    height: pxTorem(100px);
+    margin: 0 auto;
+    margin-top: 50px;
+
+    @include font-dpr(16px);
+    color: #234755;
+}
+
+.content-6 {
+    width: 100%;
+    height: pxTorem(600px);
+    margin: 0 auto;
+    padding: pxTorem(40px) pxTorem(60px);
+
+    @include font-dpr(18px);
+    background: #e6e6e6;
+
+    p {
+        width: 100%;
+        @include font-dpr(14px);
+        line-height: pxTorem(64px);
+        color: #747474;
+    }
+}
+
+.content-7 {
+    width: 100%;
+    height: pxTorem(200px);
+    margin: 0 auto;
+    @include font-dpr(18px);
+    background: #e6e6e6;
+
+    p {
+        margin-left: pxTorem(50px);
+        padding-top: pxTorem(30px);
+
+        @include font-dpr(14px);
+        line-height: pxTorem(70px);
+        color: #747474;
+
+        .iconfont {
+            @include font-dpr(14px);
+            color: #41b035;
+        }
+    }
+}
+
+.opera-btn {
+    width: 100%;
+    height: pxTorem(80px);
+    margin: pxTorem(30px) auto;
+}
+
+.btn {
+    width: 100%;
+    height: pxTorem(80px);
+
+    @include font-dpr(18px);
+    text-align: center;
+    line-height: pxTorem(80px);
+    font-weight: 100;
+    color: #ffffff;
+    background: #234755;
+}
+
+.content-9 {
+    width: 100%;
+    height: pxTorem(100px);
+    margin: pxTorem(30px) auto;
+
+    @include font-dpr(16px);
+    font-weight: 300;
+    color: #b4b4b4;
+}
+
+.content-10 {
+    width: 100%;
+    height: pxTorem(160px);
+    margin: pxTorem(60px) auto;
+    border-bottom: pxTorem(3px) solid #b4b4b4;
+
+    button {
+        width: 100%;
+        height: pxTorem(80px);
+        border: pxTorem(3px) solid #234755;
+        @include font-dpr(16px);
+
+        color: #234755;
+        font-weight: 300;
+        background: white;
+    }
+}
+
+.content-11 {
+    width: 100%;
+    min-height: pxTorem(250px);
+    margin: pxTorem(30px) auto;
+    padding-bottom: pxTorem(50px);
+    border-bottom: pxTorem(3px) solid #b4b4b4;
+
+    @include font-dpr(14px);
+    color: #747474;
+    font-weight: 300;
+
+    .item {
+        // display: flex;
+        // justify-content: space-between;
+        margin-top: pxTorem(20px);
+
+        .item-title {
+            width: pxTorem(150px);
+            // text-align: right;
+        }
+    }
+    /* order total */
+    dd,
+    dt {
+        display: inline-block;
+    }
+
+    p:nth-child(1) {
+        margin-top: pxTorem(50px);
+    }
+
+    p:nth-child(2) {
+        margin-top: pxTorem(50px);
+    }
+
+    p:nth-child(3) {
+        margin-top: pxTorem(30px);
+    }
+}
+
+/* product-list */
+
+.flag {
+    display: table;
+    padding: pxTorem(56px) 0;
+    border-bottom: pxTorem(3px) solid #747474;
+    .flag-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: pxTorem(30px);
+    }
+    .flag-body {
+        // display: table-row;
+    }
+}
+
+.flag-item {
+    position: relative;
+    display: table-cell;
+    vertical-align: top; // height: pxTorem(222px);
+    &.figure {
+        padding: 0;
+        height: pxTorem(222px);
+        width: pxTorem(220px);
+        img {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &.figcaption {
+        padding-left: pxTorem(20px);
+    }
+    .flag-title {
+        @include font-dpr(14px);
+        margin-bottom: pxTorem(10px);
+    }
+    .flag-series,
+    .flag-No {
+        @include font-dpr(12px);
+    }
+    .flag-price {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        .count {
+            width: pxTorem(180px);
+            height: pxTorem(42px);
+            padding: 0 0 0 pxTorem(20px);
+            color: #747474;
+        }
+        strong {
+            position: absolute;
+            right: pxTorem(20px);
+            @include font-dpr(16px);
+            color: #234755;
+            font-weight: 400;
+        }
+    }
+}
+
+/* Subtotal orders */
+
+.subtotal-orders {
+    display: table;
+    width: 100%;
+    padding-top: pxTorem(40px);
+    @include font-dpr(14px);
+    .item {
+        display: flex;
+        justify-content: space-between;
+    }
+    .thead,
+    .tbody,
+    .tfoot {
+        border-bottom: pxTorem(3px) solid #747474;
+    }
+    .thead {
+        padding-bottom: pxTorem(10px);
+        .count {
+            color: #234755;
+        }
+    }
+    .tbody {
+        padding: pxTorem(20px) 0 pxTorem(14px) 0;
+        line-height: 2;
+        strong {
+            font-weight: 500;
+        }
+        .item-total {
+            strong {
+                color: #234755;
+            }
+        }
+    }
+    .tfoot {
+        padding: pxTorem(40px) 0 pxTorem(14px) 0;
+        color: #bcbcbc;
+
+        .explanation {
+            margin-bottom: pxTorem(46px);
+        }
+        p + p {
+            margin-top: pxTorem(46px);
+        }
+    }
+
+    .tfoot-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: pxTorem(38px);
+        text-align: center;
+    }
+}

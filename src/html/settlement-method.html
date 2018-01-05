@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    @@include('../html/common/head.html')
+    <link rel="stylesheet" href="../css/settlement-method.css">
+    <title>结算方式</title>
+</head>
+
+<body>
+
+    @@include('common/header.html')
+
+    <main class="main">
+        <div class="banner">
+            <h2 class="banner-title">结算方式</h2>
+        </div>
+        <section class="item-section">
+            <div class="settlement-method">
+                <ul class="method-list">
+                    <li class="method-item">
+                        <div class="fold-header item-header">
+                            <h2 class="item-title">会员结算</h2>
+                            <span class="iconfont icon-row-down-copy"></span>
+                        </div>
+                        <p class="explanation">已注册会员请登录结算，登陆后可加快结算流程，并保存购买记录</p>
+                        <!-- collaspe -->
+                        <div class="fold-body item-body">
+                            <form action="">
+                                <div class="user-item">
+                                    <label class="user-label" for="email">电子邮箱</label>
+                                    <input class="user-input" id="email" type="text" placeholder="电子邮箱">
+                                </div>
+                                <div class="user-item">
+                                    <label class="user-label" for="password">密码</label>
+                                    <input class="user-input" id="password" type="text" placeholder="至少六个字符、必须含有数字和字母">
+                                </div>
+                                <button class="user-btn">登录</button>
+                                <div class="user-link">
+                                    <a href="##">忘记密码？</a>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <div class="fold-header item-header">
+                            <h2 class="item-title">访客结算</h2>
+                            <span class="iconfont icon-row-down-copy"></span>
+                        </div>
+                        <p class="explanation">以访客身份前往结算，可稍后注册成为会员</p>
+                        <!-- collaspe -->
+                        <div class="fold-body item-body">
+                            <form action="">
+                                <div class="user-item">
+                                    <label class="user-label" for="email_visitor">电子邮箱</label>
+                                    <input class="user-input" id="email_visitor" type="text" placeholder="至少六个字符、必须含有数字和字母">
+                                </div>
+                                <button class="user-btn">前往结算</button>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="method-item">
+                        <div class="fold-header item-header">
+                            <h2 class="item-title">新会员注册</h2>
+                            <span class="iconfont icon-row-down-copy"></span>
+                        </div>
+                        <p class="explanation">注册成为Y-Store会员即可随时查看订单信息，跟踪订单状态</p>
+                        <!-- collaspe -->
+                        <div class="fold-body item-body">
+                            <form action="">
+                                <div class="user-item">
+                                    <label class="user-label" for="email_vip">电子邮箱</label>
+                                    <input class="user-input" id="email_vip" type="text" placeholder="电子邮箱">
+                                </div>
+                                <div class="user-item">
+                                    <label class="user-label" for="password_vip">密码</label>
+                                    <input class="user-input" id="password_vip" type="text" placeholder="至少六个字符、必须含有数字和字母">
+                                </div>
+                                <div class="user-item">
+                                    <label class="user-label" for="passwordConfirm">确认密码</label>
+                                    <input class="user-input" id="passwordConfirm" type="text" placeholder="至少六个字符、必须含有数字和字母">
+                                </div>
+                                <div class="user-policy">
+                                    <input class="user-input" id="" type="checkbox">
+                                    <label class="user-label" for="">我已阅读并接受y-store惟度的
+                                        <a href="###">隐私政策</a>和
+                                        <a href="###">销售条款</a>
+                                    </label>
+                                </div>
+                                <button class="user-btn">注册并登录</button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                <div class="method-footer">
+                    <h3 class="title">温馨提示</h3>
+                    <p>Y-Store尊重客户隐私并会稳妥处理信息安全性和保密性</p>
+                    <p>提供您安全无忧的购物体验！</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('../html/common/footer.html') @@include('../html/common/foot.html')
+    <script src="../js/settlement-method.js"></script>
+</body>
+
+</html>
